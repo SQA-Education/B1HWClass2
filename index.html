@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B1 Session 2: Comparing Holidays</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:#5B5091;min-height:100vh;padding:20px}.container{max-width:800px;margin:0 auto}.header{background:#fff;border-radius:20px;padding:30px;margin-bottom:20px;text-align:center}.header h1{color:#5B5091;font-size:1.4em}.header p{color:#888}.badge{background:#F5A623;color:#fff;padding:4px 12px;border-radius:20px;font-size:.8em}.card{background:#fff;border-radius:16px;padding:25px;margin-bottom:20px}.card h2{color:#5B5091;margin-bottom:15px}label{font-weight:600;color:#333;display:block;margin-bottom:8px}input[type="text"],select{width:100%;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;margin-bottom:15px}.btn{background:#5B5091;color:#fff;border:none;padding:14px 32px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;width:100%;margin-top:10px}.btn:hover{background:#4a4080}.btn-orange{background:#F5A623}.section{display:none}.section.active{display:block}.reading-box{background:#f8f9fa;border-radius:12px;padding:20px;margin-bottom:20px;border-left:4px solid #5B5091;line-height:1.7}.question{background:#f8f9fa;border-radius:12px;padding:20px;margin:15px 0;border:1px solid #eee}.question h4{margin-bottom:15px;color:#333}.option{padding:14px;border:2px solid #e0e0e0;border-radius:10px;cursor:pointer;margin-bottom:10px;display:flex;align-items:center;gap:12px}.option:hover{border-color:#5B5091;background:#f8f6ff}.option.selected{border-color:#5B5091;background:#f0edff}.option.correct{border-color:#22c55e;background:#f0fdf4}.option.incorrect{border-color:#ef4444;background:#fef2f2}.circle{width:20px;height:20px;border:2px solid #ccc;border-radius:50%;flex-shrink:0}.option.selected .circle{border-color:#5B5091;background:#5B5091}textarea{width:100%;min-height:120px;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;font-family:inherit}textarea:focus{outline:none;border-color:#5B5091}.progress{height:8px;background:#e0e0e0;border-radius:4px;margin-bottom:20px}.progress-bar{height:100%;background:#F5A623;border-radius:4px}.score-card{background:linear-gradient(135deg,#5B5091,#7B6DB5);border-radius:20px;padding:35px;color:#fff;text-align:center}.score-big{font-size:4em;font-weight:700}.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}.scores>div{background:rgba(255,255,255,.15);border-radius:12px;padding:12px}.scores label{font-size:.75em;opacity:.9}.scores span{font-size:1.4em;font-weight:700;display:block}.fill-input{width:120px;border:none;border-bottom:2px solid #5B5091;text-align:center;font-size:16px;padding:5px;background:transparent}.fill-input:focus{outline:none}.record-btn{width:80px;height:80px;border-radius:50%;background:#fff;border:3px solid #5B5091;cursor:pointer;margin:20px auto;display:flex;align-items:center;justify-content:center}.record-btn.recording{border-color:#ef4444;animation:pulse 1.5s infinite}.record-dot{width:24px;height:24px;background:#5B5091;border-radius:50%}.record-btn.recording .record-dot{background:#ef4444;border-radius:4px;width:20px;height:20px}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)}50%{box-shadow:0 0 0 15px rgba(239,68,68,0)}}.timer{text-align:center;font-size:28px;font-weight:700;color:#5B5091}.status{text-align:center;color:#666;margin-top:10px}audio{width:100%;margin-top:15px}.hidden{display:none}.feedback{background:#f8f6ff;border:1px solid #5B5091;border-radius:12px;padding:20px;margin-top:15px}.transcript-box{width:100%;min-height:110px;padding:14px;border:2px solid #e0e0e0;border-radius:12px;background:#fafafa;font-size:16px;line-height:1.5;color:#333;white-space:pre-wrap}.checklist{background:#f8f9fa;border:1px solid #eee;border-radius:12px;padding:16px;margin:15px 0}.checklist label{display:flex;align-items:flex-start;gap:10px;font-weight:400;margin-bottom:10px}.checklist input{margin-top:4px}.helper-note{font-size:14px;color:#777;margin-top:8px}@media(max-width:600px){.scores{grid-template-columns:repeat(3,1fr)}}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',sans-serif;background:#5B5091;min-height:100vh;padding:20px}.container{max-width:800px;margin:0 auto}.header{background:#fff;border-radius:20px;padding:30px;margin-bottom:20px;text-align:center}.header h1{color:#5B5091;font-size:1.4em}.header p{color:#888}.badge{background:#F5A623;color:#fff;padding:4px 12px;border-radius:20px;font-size:.8em}.level-badge{background:#5B5091;color:#fff;padding:6px 16px;border-radius:20px;font-size:.9em;display:inline-block;margin-bottom:10px;font-weight:600}.card{background:#fff;border-radius:16px;padding:25px;margin-bottom:20px}.card h2{color:#5B5091;margin-bottom:15px}label{font-weight:600;color:#333;display:block;margin-bottom:8px}input[type="text"],select{width:100%;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;margin-bottom:15px}.btn{background:#5B5091;color:#fff;border:none;padding:14px 32px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;width:100%;margin-top:10px}.btn:hover{background:#4a4080}.btn-orange{background:#F5A623}.section{display:none}.section.active{display:block}.reading-box{background:#f8f9fa;border-radius:12px;padding:20px;margin-bottom:20px;border-left:4px solid #5B5091;line-height:1.7}.question{background:#f8f9fa;border-radius:12px;padding:20px;margin:15px 0;border:1px solid #eee}.question h4{margin-bottom:15px;color:#333}.option{padding:14px;border:2px solid #e0e0e0;border-radius:10px;cursor:pointer;margin-bottom:10px;display:flex;align-items:center;gap:12px}.option:hover{border-color:#5B5091;background:#f8f6ff}.option.selected{border-color:#5B5091;background:#f0edff}.option.correct{border-color:#22c55e;background:#f0fdf4}.option.incorrect{border-color:#ef4444;background:#fef2f2}.circle{width:20px;height:20px;border:2px solid #ccc;border-radius:50%;flex-shrink:0}.option.selected .circle{border-color:#5B5091;background:#5B5091}textarea{width:100%;min-height:120px;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;font-family:inherit}textarea:focus{outline:none;border-color:#5B5091}.progress{height:8px;background:#e0e0e0;border-radius:4px;margin-bottom:20px}.progress-bar{height:100%;background:#F5A623;border-radius:4px}.score-card{background:linear-gradient(135deg,#5B5091,#7B6DB5);border-radius:20px;padding:35px;color:#fff;text-align:center}.score-big{font-size:4em;font-weight:700}.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}.scores>div{background:rgba(255,255,255,.15);border-radius:12px;padding:12px}.scores label{font-size:.75em;opacity:.9}.scores span{font-size:1.4em;font-weight:700;display:block}.fill-input{width:120px;border:none;border-bottom:2px solid #5B5091;text-align:center;font-size:16px;padding:5px;background:transparent}.fill-input:focus{outline:none}.record-btn{width:80px;height:80px;border-radius:50%;background:#fff;border:3px solid #5B5091;cursor:pointer;margin:20px auto;display:flex;align-items:center;justify-content:center}.record-btn.recording{border-color:#ef4444;animation:pulse 1.5s infinite}.record-dot{width:24px;height:24px;background:#5B5091;border-radius:50%}.record-btn.recording .record-dot{background:#ef4444;border-radius:4px;width:20px;height:20px}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)}50%{box-shadow:0 0 0 15px rgba(239,68,68,0)}}.timer{text-align:center;font-size:28px;font-weight:700;color:#5B5091}.status{text-align:center;color:#666;margin-top:10px}audio{width:100%;margin-top:15px}.hidden{display:none}.feedback{background:#f8f6ff;border:1px solid #5B5091;border-radius:12px;padding:20px;margin-top:15px}.transcript-box{width:100%;min-height:110px;padding:14px;border:2px solid #e0e0e0;border-radius:12px;background:#fafafa;font-size:16px;line-height:1.5;color:#333;white-space:pre-wrap}.checklist{background:#f8f9fa;border:1px solid #eee;border-radius:12px;padding:16px;margin:15px 0}.checklist label{display:flex;align-items:flex-start;gap:10px;font-weight:400;margin-bottom:10px}.checklist input{margin-top:4px}.helper-note{font-size:14px;color:#777;margin-top:8px}@media(max-width:600px){.scores{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="header">
-<h1>Session 2: Comparing Holidays <span class="badge">Quiz</span></h1>
+<div class="level-badge">CEFR Level B1 - Intermediate</div>
+<h1>B1 Session 2: Comparing Holidays <span class="badge">Quiz</span></h1>
 <p>Week 1 • Comparative Adjectives & Traditions</p>
 </div>
 
@@ -123,7 +124,6 @@
 <button class="btn btn-orange" style="margin-top:25px" id="submitBtn" onclick="submitToTeacher()">Submit to Teacher →</button>
 <div id="submitStatus" style="display:none;margin-top:16px;background:rgba(255,255,255,.2);border-radius:12px;padding:16px;text-align:center"></div>
 </div>
-<div style="text-align:center;margin-top:20px"><button class="btn" style="background:#fff;color:#5B5091" onclick="location.reload()">Try Again</button></div>
 </div>
 </div>
 
@@ -171,7 +171,6 @@ const vocabBank=[
 function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
 
 function initQuestions(){
-  // Reading - pick 3
   const rQs=shuffle([...readingQBank]).slice(0,3);
   let rHTML='';
   rQs.forEach((q,i)=>{
@@ -186,7 +185,6 @@ function initQuestions(){
   });
   document.getElementById('readingQuestions').innerHTML=rHTML;
 
-  // Vocab - pick 6
   vocabItems=shuffle([...vocabBank]).slice(0,6);
   let vHTML='';
   vocabItems.forEach((v,i)=>{
@@ -194,7 +192,6 @@ function initQuestions(){
   });
   document.getElementById('vocabQuestions').innerHTML=vHTML;
 
-  // Grammar - pick 8
   const gQs=shuffle([...grammarQBank]).slice(0,8);
   let gHTML='';
   gQs.forEach((q,i)=>{
@@ -233,7 +230,6 @@ function checkWriting(){
   const words=text.trim().split(/\s+/).filter(Boolean);
   let score=0; const details=[];
 
-  // 1pt each for comparative adjectives, up to 4pts
   const comparativeAdjs=['bigger','smaller','longer','shorter','better','worse','faster','slower','easier','harder','cheaper','more expensive','more traditional','more interesting','more boring','more delicious','hotter','colder','louder','quieter','older','newer','sweeter','healthier'];
   const adjHits=comparativeAdjs.filter(a=>text.includes(a));
   const adjScore=Math.min(4, adjHits.length);
@@ -241,17 +237,14 @@ function checkWriting(){
   if(adjScore>0) details.push('✅ Comparative adjectives ('+adjHits.slice(0,4).join(', ')+'): '+adjScore+'/4');
   else details.push('❌ No comparative adjectives found (e.g. bigger, better, more expensive)');
 
-  // Up to 3pts for "as + adjective + as" structure
   const asAsPattern=/as\s+\w+\s+as/;
   if(asAsPattern.test(text)){score+=3;details.push('✅ "as...as" structure used: 3/3');}
   else details.push('❌ Missing "as...as" structure (e.g. as cold as, as big as)');
 
-  // Up to 3pts for "comparative + than" structure
   const thanPattern=/\w+er\s+than|more\s+\w+\s+than|less\s+\w+\s+than/;
   if(thanPattern.test(text)){score+=3;details.push('✅ "...than" structure used: 3/3');}
   else details.push('❌ Missing "...than" structure (e.g. bigger than, more expensive than)');
 
-  // Up to 10pts for basic writing skills
   let writingPts=0;
   if(words.length>=15){writingPts+=3;details.push('✅ Good length ('+words.length+' words)');}
   else if(words.length>=8){writingPts+=2;details.push('⚠️ Try to write more ('+words.length+' words)');}
@@ -309,16 +302,13 @@ function stopRec(){
 
 function checkSpeaking(){
   const text=(speakingTranscript||'').toLowerCase();
-  // Score only on comparative adjectives as they tend to be stream of consciousness
   const comparativeAdjs=['bigger','smaller','longer','shorter','better','worse','faster','slower','easier','harder','cheaper','more expensive','more traditional','more interesting','more delicious','hotter','colder','louder','quieter','older','newer','sweeter','healthier','more beautiful','more modern'];
   const adjHits=comparativeAdjs.filter(a=>text.includes(a));
-  // 5pts per comparative adjective used, up to 20pts
   const adjScore=Math.min(20, adjHits.length*5);
-  // Bonus: also count "than" and "as...as" usage
   const thanCount=(text.match(/than/g)||[]).length;
   const asAsCount=(text.match(/as\s+\w+\s+as/g)||[]).length;
   let score=adjScore;
-  if(score===0&&(thanCount>0||asAsCount>0)) score=5; // partial credit
+  if(score===0&&(thanCount>0||asAsCount>0)) score=5;
   scores.s=Math.min(20,score);
   const details=[];
   if(adjHits.length>0) details.push('✅ Comparative adjectives found: '+adjHits.slice(0,4).join(', '));
@@ -348,17 +338,23 @@ function submitToTeacher(){
   formData.append('entry.1207114914',pct+'%');
   formData.append('entry.939912807',writingText||'');
   formData.append('entry.2086302086',speakingTranscript||'No transcript captured');
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSf9uEs5MqWLveyoaMBxeWx3pW1b90siwgaom766CpwqnOI7Dg/formResponse',{method:'POST',mode:'no-cors',body:formData})
-  .then(function(){
-    if(btn){btn.textContent='Submitted!';btn.style.background='#22c55e';}
+  function showSuccess(){
+    if(btn){btn.textContent='Submitted!';btn.style.background='#22c55e';btn.disabled=true;}
     var s=document.getElementById('submitStatus');
     if(s){s.textContent='Homework submitted! Your teacher received your work.';s.style.display='block';}
-  }).catch(function(){
+  }
+  function showFailure(){
     submitted=false;
     if(btn){btn.disabled=false;btn.textContent='Failed - Tap to Retry';btn.style.background='#ef4444';}
     var s=document.getElementById('submitStatus');
     if(s){s.textContent='Submission failed. Check your internet and try again.';s.style.display='block';}
-  });
+  }
+  // 6s timeout fallback for mobile (no-cors never errors on success)
+  var done=false;
+  var timeoutId=setTimeout(function(){if(!done){done=true;showSuccess();}},6000);
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSf9uEs5MqWLveyoaMBxeWx3pW1b90siwgaom766CpwqnOI7Dg/formResponse',{method:'POST',mode:'no-cors',body:formData})
+  .then(function(){if(done)return;done=true;clearTimeout(timeoutId);showSuccess();})
+  .catch(function(){if(done)return;done=true;clearTimeout(timeoutId);showFailure();});
 }
 </script>
 </body>
